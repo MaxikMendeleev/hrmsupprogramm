@@ -1,0 +1,17 @@
+- provide(:title, 'Регистрация')
+%h1 Регистрация
+.row
+  .span6.offset3.container-three
+    = form_for(@user) do |f|
+      = render 'shared/error_messages', object: f.object
+      = f.label :name, "Ваше имя"
+      = f.text_field :name
+      = f.label :surname, "Ваша фамилия"
+      = f.text_field :surname
+      = f.label :email, "Ваш E-mail"
+      = f.text_field :email
+      = f.label :password, "Ваш пароль"
+      = f.password_field :password
+      = f.label :password_confirmation, "Повторите пароль"
+      = f.password_field :password_confirmation
+      = f.submit "Создать мой аккаунт", class: "btn btn-large btn-primary"

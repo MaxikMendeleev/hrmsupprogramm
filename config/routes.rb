@@ -1,13 +1,14 @@
 Rails.application.routes.draw do
 
   devise_for :users
-  get 'users/show'
+
+  resource :users
 
   mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
 
   # root 'projects#index'
   get 'users/show', as: 'user_root'
-  root 'users#index'
+  root 'users#show'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

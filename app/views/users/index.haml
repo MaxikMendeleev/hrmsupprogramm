@@ -1,0 +1,6 @@
+- provide(:title, 'Все пользователи')
+%h1 Все пользователи
+= will_paginate
+%ul.users
+  = render @users
+= will_paginate

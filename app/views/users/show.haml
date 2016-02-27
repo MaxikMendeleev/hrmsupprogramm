@@ -1,0 +1,14 @@
+- provide(:title, @user.name)
+.row
+  %aside.span4
+    %section
+      %h1
+        = gravatar_for @user
+        Имя:
+        = @user.name
+      %h1
+        Фамилия:
+        = @user.surname
+      %h1
+        E-mail:
+        = @user.email

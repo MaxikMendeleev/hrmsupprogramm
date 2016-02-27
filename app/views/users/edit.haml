@@ -1,0 +1,23 @@
+- provide(:title, 'Изменение профиля')
+%h1 Изменение профиля
+.row
+  .span6.offset3.container-three
+    = form_for(@user) do |f|
+      = render 'shared/error_messages', object: f.object
+      = f.label :name, "Ваше имя"
+      = f.text_field :name
+      = f.label :surname, "Ваша фамилия"
+      = f.text_field :surname
+      = f.label :email, "Ваш E-mail"
+      = f.text_field :email
+      = f.label :password, "Ваш пароль"
+      = f.password_field :password
+      = f.label :password_confirmation, "Повторите пароль"
+      = f.password_field :password_confirmation
+      .edit_user_image
+        .edit_user_image_icon
+          = gravatar_for @user
+        .edit_user_image_label
+          %a{:href => "http://gravatar.com/emails"} Изменить
+      = f.submit "Сохранить изменения", class: "btn btn-large btn-primary"
+

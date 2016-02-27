@@ -3,8 +3,9 @@ RailsAdmin.config do |config|
 
   config.main_app_name = ['HRMSupProgramm', :admin_page]
 
-  # require 'i18n'
-  # I18n.default_locale = :de
+  require 'i18n'
+  I18n.default_locale = :en
+
   ### Popular gems integration
 
   ## == Devise ==

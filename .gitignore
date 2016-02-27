@@ -36,3 +36,4 @@ bower.json
 /.idea/
 hrmsupprogramm.iml
 /test/
+/db/schema.rb
